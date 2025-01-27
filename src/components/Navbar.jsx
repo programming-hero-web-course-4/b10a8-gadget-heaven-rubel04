@@ -1,30 +1,12 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
-import { useEffect, useState } from "react";
-import { getStoredProduct } from "../Utility/cart";
 
 const Navbar = () => {
-  const [products, setProducts] = useState([]);
-  const [carts, setCarts] = useState([]);
-  useEffect(() => {
-    fetch("./products.json")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
-  useEffect(() => {
-    const storedProduct = getStoredProduct();
-    const storedProductStr = storedProduct.map((id) => id);
-    // console.log(storedProductStr);
-    const product = products.filter((product) =>
-      storedProductStr.includes(product.product_id)
-    );
-    setCarts(product);
-    
-  }, [products]);
+  const {pathname} = useLocation()
   return (
-    <div className="bg-[#9538E2]">
-      <div className="navbar w-7xl mx-auto  rounded-t-xl text-white">
+    <div className={`${pathname === "/" ? 'bg-[#9538E2] text-white' : "text-black"}`}>
+      <div className="navbar w-7xl mx-auto  rounded-t-xl">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -120,13 +102,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-4">
-          <Link to='/dashboard' className="text-xl relative text-black bg-white p-2 rounded-full">
+          <Link to='/dashboard' className="text-xl text-black bg-white p-2 rounded-full">
             <IoCartOutline></IoCartOutline>
-            <span className="absolute bg-white text-red-400 right-0 -top-2 text-sm px-1 rounded-full">{carts.length}</span>
           </Link>
-          <Link className="text-xl relative text-black bg-white p-2 rounded-full">
+          <Link className="text-xl text-black bg-white p-2 rounded-full">
             <CiHeart></CiHeart>
-          <span className="absolute bg-white text-red-400 right-0 -top-2 text-sm px-1 rounded-full">{carts.length}</span>
           </Link>
         </div>
       </div>

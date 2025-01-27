@@ -4,7 +4,6 @@ import Product from "./Product";
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
-  const [active, setActive] = useState(false);
   useEffect(() => {
     fetch("./products.json")
       .then((res) => res.json())
@@ -16,7 +15,6 @@ const Products = () => {
   const handleCategoryProduct = (categoryType) => {
     if (categoryType === "All") {
       setProducts(allProducts);
-      setActive(!active);
       return;
     } else if (categoryType === "") {
       setProducts([]);
@@ -38,71 +36,43 @@ const Products = () => {
             <div className="bg-white p-4 rounded-xl space-y-4">
               <button
                 onClick={() => handleCategoryProduct("All")}
-                className={`flex cursor-pointer items-center gap-2 font-medium ${
-                  active
-                    ? "text-white bg-[#9538E2]"
-                    : "text-[#09080F99] bg-[#09080F0D]"
-                } py-1 px-4 rounded-full w-full`}
+                className="flex cursor-pointer items-center gap-2 font-medium bg-[#09080F0D] py-1 px-4 rounded-full w-full"
               >
                 All Products
               </button>
               <button
                 onClick={() => handleCategoryProduct("Laptops")}
-                className={`flex cursor-pointer items-center gap-2 font-medium ${
-                  active
-                    ? "text-white bg-[#9538E2]"
-                    : "text-[#09080F99] bg-[#09080F0D]"
-                } py-1 px-4 rounded-full w-full`}
+                className="flex cursor-pointer items-center gap-2 font-medium bg-[#09080F0D] py-1 px-4 rounded-full w-full"
               >
                 Laptops
               </button>
               <button
                 onClick={() => handleCategoryProduct("Phones")}
-                className={`flex cursor-pointer items-center gap-2 font-medium ${
-                  active
-                    ? "text-white bg-[#9538E2]"
-                    : "text-[#09080F99] bg-[#09080F0D]"
-                } py-1 px-4 rounded-full w-full`}
+                className="flex cursor-pointer items-center gap-2 font-medium bg-[#09080F0D] py-1 px-4 rounded-full w-full"
               >
                 Phones
               </button>
               <button
                 onClick={() => handleCategoryProduct("Smartwatches")}
-                className={`flex cursor-pointer items-center gap-2 font-medium ${
-                  active
-                    ? "text-white bg-[#9538E2]"
-                    : "text-[#09080F99] bg-[#09080F0D]"
-                } py-1 px-4 rounded-full w-full`}
+                className="flex cursor-pointer items-center gap-2 font-medium bg-[#09080F0D] py-1 px-4 rounded-full w-full"
               >
                 Smart Watches
               </button>
               <button
                 onClick={() => handleCategoryProduct("")}
-                className={`flex cursor-pointer items-center gap-2 font-medium ${
-                  active
-                    ? "text-white bg-[#9538E2]"
-                    : "text-[#09080F99] bg-[#09080F0D]"
-                } py-1 px-4 rounded-full w-full`}
+                className="flex cursor-pointer items-center gap-2 font-medium bg-[#09080F0D] py-1 px-4 rounded-full w-full"
               >
                 Accessories
               </button>
               <button
                 onClick={() => handleCategoryProduct("")}
-                className={`flex cursor-pointer items-center gap-2 font-medium ${
-                  active
-                    ? "text-white bg-[#9538E2]"
-                    : "text-[#09080F99] bg-[#09080F0D]"
-                } py-1 px-4 rounded-full w-full`}
+                className="flex cursor-pointer items-center gap-2 font-medium bg-[#09080F0D] py-1 px-4 rounded-full w-full"
               >
                 MacBook
               </button>
               <button
                 onClick={() => handleCategoryProduct("")}
-                className={`flex cursor-pointer items-center gap-2 font-medium ${
-                  active
-                    ? "text-white bg-[#9538E2]"
-                    : "text-[#09080F99] bg-[#09080F0D]"
-                } py-1 px-4 rounded-full w-full`}
+                className="flex cursor-pointer items-center gap-2 font-medium bg-[#09080F0D] py-1 px-4 rounded-full w-full"
               >
                 Iphones
               </button>

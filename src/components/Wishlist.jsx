@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
-import { addProductToLS, getStoredWishList, removeWishlistProductToLS } from "../Utility/cart";
+import {
+  addProductToLS,
+  getStoredWishList,
+  removeWishlistProductToLS,
+} from "../Utility/cart";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
 
 const Wishlist = () => {
   const [products, setProducts] = useState([]);
@@ -24,14 +28,13 @@ const Wishlist = () => {
   }, [products]);
   const handleDelete = (id) => {
     const product = carts.filter((cart) => cart.product_id !== id);
-    toast.success(`${product.product_name} Deleted successfully to the Cart`)
+    toast.success(`Deleted successfully to the Cart`);
     removeWishlistProductToLS(id);
     setCarts(product);
-
   };
   const handleProductAddToCart = (product) => {
-    addProductToLS(product.product_id)
-    toast.success(`${product.product_name} Successfully added to the Cart`)
+    addProductToLS(product.product_id);
+    toast.success(`${product.product_name} Successfully added to the Cart`);
     handleDelete(product.product_id);
   };
   return (
