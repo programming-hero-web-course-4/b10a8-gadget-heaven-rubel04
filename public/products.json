@@ -2,7 +2,7 @@
   {
     "product_id": 1,
     "product_name": "Gaming Laptop",
-    "product_image": "../src/assets/gaming laptop.jpeg",
+    "product_image": "https://res.cloudinary.com/daxjoqam6/image/upload/v1737948740/gaming_laptop_loyckq.jpg",
     "category": "Laptops",
     "price": 1199.99,
     "description": "Powerful gaming laptop with high-end graphics and fast processing.",
@@ -13,7 +13,7 @@
   {
     "product_id": 10,
     "product_name": "Fitness Smartwatch",
-    "product_image": "../src/assets/Fitness Smartwatch.jpeg",
+    "product_image": "https://res.cloudinary.com/daxjoqam6/image/upload/v1737948731/Fitness_Smartwatch_utvcff.jpg",
     "category": "Smartwatches",
     "price": 149.99,
     "description": "Stylish and functional smartwatch tailored for fitness enthusiasts.",
@@ -24,7 +24,7 @@
   {
     "product_id": 3,
     "product_name": "Ultrabook",
-    "product_image": "../src/assets/Ultrabook.jpeg",
+    "product_image": "https://res.cloudinary.com/daxjoqam6/image/upload/v1737948763/Ultrabook_imgkvg.jpg",
     "category": "Laptops",
     "price": 1499.99,
     "description": "Lightweight ultrabook with stunning design and excellent battery life.",
@@ -35,7 +35,7 @@
   {
     "product_id": 4,
     "product_name": "Convertible Laptop",
-    "product_image": "../src/assets/Convertible Laptop.jpeg",
+    "product_image": "https://res.cloudinary.com/daxjoqam6/image/upload/v1737948692/Convertible_Laptop_b3xezo.jpg",
     "category": "Laptops",
     "price": 799.99,
     "description": "2-in-1 laptop that easily converts into a tablet for versatile use.",
@@ -46,7 +46,7 @@
   {
     "product_id": 6,
     "product_name": "Creative Laptop",
-    "product_image": "../src/assets/Creative Laptop.jpeg",
+    "product_image": "https://res.cloudinary.com/daxjoqam6/image/upload/v1737948696/Creative_Laptop_hypoev.jpg",
     "category": "Laptops",
     "price": 1799.99,
     "description": "Laptop designed for content creators with powerful GPU and display.",
@@ -57,7 +57,7 @@
   {
     "product_id": 7,
     "product_name": "Flagship Smartphone",
-    "product_image": "../src/assets/Flagship Smartphone.jpeg",
+    "product_image": "https://res.cloudinary.com/daxjoqam6/image/upload/v1737948740/Flagship_Smartphone_btch06.jpg",
     "category": "Phones",
     "price": 999.99,
     "description": "High-end smartphone with cutting-edge technology and stunning design.",
@@ -72,7 +72,7 @@
   {
     "product_id": 8,
     "product_name": "Budget Smartphone",
-    "product_image": "../src/assets/Budget Smartphone.jpeg",
+    "product_image": "https://res.cloudinary.com/daxjoqam6/image/upload/v1737948686/Budget_Smartphone_czvde2.jpg",
     "category": "Phones",
     "price": 199.99,
     "description": "Affordable smartphone with reliable performance and good features.",
@@ -83,7 +83,7 @@
   {
     "product_id": 5,
     "product_name": "Student Laptop",
-    "product_image": "../src/assets/Student Laptop.jpeg",
+    "product_image": "https://res.cloudinary.com/daxjoqam6/image/upload/v1737948763/Student_Laptop_oubqgj.jpg",
     "category": "Laptops",
     "price": 499.99,
     "description": "Affordable laptop designed for students with great performance.",
@@ -94,7 +94,7 @@
   {
     "product_id": 9,
     "product_name": "Smartwatch Pro",
-    "product_image": "../src/assets/Smartwatch Pro.jpeg",
+    "product_image": "https://res.cloudinary.com/daxjoqam6/image/upload/v1737948763/Smartwatch_Pro_v1bqzy.jpg",
     "category": "Smartwatches",
     "price": 299.99,
     "description": "Advanced smartwatch with premium design and robust health features.",
@@ -105,7 +105,7 @@
   {
     "product_id": 2,
     "product_name": "Business Laptop",
-    "product_image": "../src/assets/Business Laptop.jpeg",
+    "product_image": "https://res.cloudinary.com/daxjoqam6/image/upload/v1737948690/Business_Laptop_busi25.jpg",
     "category": "Laptops",
     "price": 999.99,
     "description": "Slim and portable laptop optimized for productivity and performance.",
