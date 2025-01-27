@@ -1,0 +1,116 @@
+[
+  {
+    "product_id": 1,
+    "product_name": "Gaming Laptop",
+    "product_image": "../src/assets/gaming laptop.jpeg",
+    "category": "Laptops",
+    "price": 1199.99,
+    "description": "Powerful gaming laptop with high-end graphics and fast processing.",
+    "specification": ["16GB RAM", "1TB SSD", "NVIDIA RTX 3060"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": 10,
+    "product_name": "Fitness Smartwatch",
+    "product_image": "../src/assets/Fitness Smartwatch.jpeg",
+    "category": "Smartwatches",
+    "price": 149.99,
+    "description": "Stylish and functional smartwatch tailored for fitness enthusiasts.",
+    "specification": ["Step tracking", "Sleep analysis", "5-day battery life"],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": 3,
+    "product_name": "Ultrabook",
+    "product_image": "../src/assets/Ultrabook.jpeg",
+    "category": "Laptops",
+    "price": 1499.99,
+    "description": "Lightweight ultrabook with stunning design and excellent battery life.",
+    "specification": ["13-inch display", "16GB RAM", "1TB SSD"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 4,
+    "product_name": "Convertible Laptop",
+    "product_image": "../src/assets/Convertible Laptop.jpeg",
+    "category": "Laptops",
+    "price": 799.99,
+    "description": "2-in-1 laptop that easily converts into a tablet for versatile use.",
+    "specification": ["14-inch touchscreen", "8GB RAM", "256GB SSD"],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product_id": 6,
+    "product_name": "Creative Laptop",
+    "product_image": "../src/assets/Creative Laptop.jpeg",
+    "category": "Laptops",
+    "price": 1799.99,
+    "description": "Laptop designed for content creators with powerful GPU and display.",
+    "specification": ["16-inch 4K display", "32GB RAM", "2TB SSD"],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": 7,
+    "product_name": "Flagship Smartphone",
+    "product_image": "../src/assets/Flagship Smartphone.jpeg",
+    "category": "Phones",
+    "price": 999.99,
+    "description": "High-end smartphone with cutting-edge technology and stunning design.",
+    "specification": [
+      "6.8-inch AMOLED display",
+      "256GB storage",
+      "Quad-camera system"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 8,
+    "product_name": "Budget Smartphone",
+    "product_image": "../src/assets/Budget Smartphone.jpeg",
+    "category": "Phones",
+    "price": 199.99,
+    "description": "Affordable smartphone with reliable performance and good features.",
+    "specification": ["6.5-inch display", "64GB storage", "Dual-camera setup"],
+    "availability": true,
+    "rating": 4.3
+  },
+  {
+    "product_id": 5,
+    "product_name": "Student Laptop",
+    "product_image": "../src/assets/Student Laptop.jpeg",
+    "category": "Laptops",
+    "price": 499.99,
+    "description": "Affordable laptop designed for students with great performance.",
+    "specification": ["15.6-inch display", "4GB RAM", "128GB SSD"],
+    "availability": true,
+    "rating": 4.2
+  },
+  {
+    "product_id": 9,
+    "product_name": "Smartwatch Pro",
+    "product_image": "../src/assets/Smartwatch Pro.jpeg",
+    "category": "Smartwatches",
+    "price": 299.99,
+    "description": "Advanced smartwatch with premium design and robust health features.",
+    "specification": ["GPS", "Heart rate monitoring", "7-day battery life"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": 2,
+    "product_name": "Business Laptop",
+    "product_image": "../src/assets/Business Laptop.jpeg",
+    "category": "Laptops",
+    "price": 999.99,
+    "description": "Slim and portable laptop optimized for productivity and performance.",
+    "specification": ["8GB RAM", "512GB SSD", "Intel i5 processor"],
+    "availability": true,
+    "rating": 4.5
+  }
+]
