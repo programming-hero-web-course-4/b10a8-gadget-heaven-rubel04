@@ -2,13 +2,14 @@ import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { addProductToLS, addWishListToLS } from "../Utility/cart";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
 
 const ProductDetails = () => {
   const products = useLoaderData();
   const { productId } = useParams();
+  const productIdStr = parseInt(productId);
   const product = products.find(
-    (product) => product.product_id === parseInt(productId)
+    (p) => p.product_id === productIdStr
   );
   const {
     product_id,
@@ -21,12 +22,12 @@ const ProductDetails = () => {
   } = product;
 
   const handleProductAddToCart = (productId) => {
-    addProductToLS(productId)
-    toast.success(`${product_name} Successfully added to the Cart`)
+    addProductToLS(productId);
+    toast.success(`${product_name} Successfully added to the Cart`);
   };
   const handleProductAddToWishlist = (productId) => {
-    addWishListToLS(productId)
-    toast.success(`${product_name} Successfully added to the Wishlist`)
+    addWishListToLS(productId);
+    toast.success(`${product_name} Successfully added to the Wishlist`);
   };
 
   return (
@@ -101,9 +102,10 @@ const ProductDetails = () => {
                 <IoCartOutline></IoCartOutline>
               </Link>
             </button>
-            <button 
-            onClick={() => handleProductAddToWishlist(product_id)}
-            className="text-xl cursor-pointer border border-gray-300 bg-white p-2 rounded-full">
+            <button
+              onClick={() => handleProductAddToWishlist(product_id)}
+              className="text-xl cursor-pointer border border-gray-300 bg-white p-2 rounded-full"
+            >
               <Link>
                 <CiHeart></CiHeart>
               </Link>
