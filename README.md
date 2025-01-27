@@ -1,4 +1,5 @@
-# [Live link](https://gadget-heaven-site.surge.sh/) 
+# [https://gadget-heaven-site.surge.sh/](https://gadget-heaven-site.surge.sh/) 
+
 # [Requirement Document Link](file:///C:/WEB%20DEVELOPMENT/Milestone-8/RESET-9/assignment-8/B10-A8-gadget-heaven/Batch-10_Assignment-08.pdf) 
 
 ## List of React Fundamental concepts used in the project:
@@ -20,7 +21,4 @@
 4. Manage cart and wishlist using state or global state management.
 5. Implement a checkout system for purchasing products.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
 

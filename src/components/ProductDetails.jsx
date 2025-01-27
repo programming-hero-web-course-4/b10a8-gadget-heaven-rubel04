@@ -3,8 +3,10 @@ import { CiHeart } from "react-icons/ci";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { addProductToLS, addWishListToLS } from "../Utility/cart";
 import toast from 'react-hot-toast';
+import { useState } from "react";
 
 const ProductDetails = () => {
+  const [isDisabled,setIsDisabled] = useState(false);
   const products = useLoaderData();
   const { productId } = useParams();
   const product = products.find(
@@ -26,6 +28,7 @@ const ProductDetails = () => {
   };
   const handleProductAddToWishlist = (productId) => {
     addWishListToLS(productId)
+    setIsDisabled(true);
     toast.success(`${product_name} Successfully added to the Wishlist`)
   };
 
@@ -102,8 +105,9 @@ const ProductDetails = () => {
               </Link>
             </button>
             <button 
+            disabled={isDisabled}
             onClick={() => handleProductAddToWishlist(product_id)}
-            className="text-xl cursor-pointer border border-gray-300 bg-white p-2 rounded-full">
+            className={`${isDisabled && 'bg-gray-500'} text-xl cursor-pointer border border-gray-300 bg-white p-2 rounded-full`}>
               <Link>
                 <CiHeart></CiHeart>
               </Link>
