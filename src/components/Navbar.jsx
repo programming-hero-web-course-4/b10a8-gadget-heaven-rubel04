@@ -5,7 +5,7 @@ import { CiHeart } from "react-icons/ci";
 const Navbar = () => {
   const {pathname} = useLocation()
   return (
-    <div className={`${pathname === "/" ? 'bg-[#9538E2] text-white' : "text-black"}`}>
+    <div className={`${pathname === "/" ? 'bg-[#9538E2] text-white' : "text-[#9538E2]"}`}>
       <div className="navbar w-7xl mx-auto  rounded-t-xl">
         <div className="navbar-start">
           <div className="dropdown">
@@ -31,7 +31,7 @@ const Navbar = () => {
             >
               <li>
                 <NavLink
-                  className={({ isActive }) => isActive && " underline"}
+                  className={({ isActive }) => isActive && " underline font-medium"}
                   to="/"
                 >
                   Home
@@ -39,7 +39,7 @@ const Navbar = () => {
               </li>
               <li className="mx-4">
                 <NavLink
-                  className={({ isActive }) => isActive && " underline"}
+                  className={({ isActive }) => isActive && " underline font-medium"}
                   to="/statistics"
                 >
                   Statistics
@@ -47,7 +47,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  className={({ isActive }) => isActive && " underline"}
+                  className={({ isActive }) => isActive && " underline font-medium"}
                   to="/dashboard"
                 >
                   Dashboard
@@ -55,7 +55,7 @@ const Navbar = () => {
               </li>
               <li>
               <NavLink
-                className={({ isActive }) => isActive && " underline"}
+                className={({ isActive }) => isActive && " underline font-medium"}
                 to="/contactUs"
               >
                 Contact Us
@@ -69,7 +69,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">
             <li>
               <NavLink
-                className={({ isActive }) => isActive && " underline"}
+                className={({ isActive }) => isActive && " underline font-medium"}
                 to="/"
               >
                 Home
@@ -77,7 +77,7 @@ const Navbar = () => {
             </li>
             <li className="mx-4">
               <NavLink
-                className={({ isActive }) => isActive && " underline"}
+                className={({ isActive }) => isActive && " underline font-medium"}
                 to="/statistics"
               >
                 Statistics
@@ -85,7 +85,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                className={({ isActive }) => isActive && " underline"}
+                className={({ isActive }) => isActive && " underline font-medium"}
                 to="/dashboard"
               >
                 Dashboard
@@ -93,7 +93,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                className={({ isActive }) => isActive && " underline"}
+                className={({ isActive }) => isActive && " underline font-medium"}
                 to="/contactUs"
               >
                 Contact Us

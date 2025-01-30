@@ -10,10 +10,8 @@ const ContactUs = () => {
       </Helmet>
       <div className="bg-[#9538E2] text-white pt-4 pb-10 ">
         <h2 className="text-3xl mb-2 font-bold text-center">Contact Us</h2>
-        <p className="text-center">
-          Explore the latest gadgets that will take your experience to the next
-          level. From smart devices to <br /> the coolest accessories, we have
-          it all!
+        <p className="text-center w-3/7 mx-auto">
+        Have questions or need assistance? Reach out to Gadget Heaven! Our team is here to help with product inquiries, orders, and support. Contact us via email, phone, or our online form—we’d love to hear from you
         </p>
       </div>
       <div className="w-7xl mx-auto my-10 flex justify-between items-center">

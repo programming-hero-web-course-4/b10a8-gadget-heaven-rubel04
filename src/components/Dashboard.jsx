@@ -19,10 +19,8 @@ const Dashboard = () => {
       </Helmet>
       <div className="bg-[#9538E2] text-white pt-4 pb-10">
         <h2 className="text-3xl font-bold text-center">Dashboard</h2>
-        <p className="text-center mt-4 mb-6">
-          Explore the latest gadgets that will take your experience to the next
-          level. From smart devices to <br /> the coolest accessories, we have
-          it all!
+        <p className="text-center mt-4 mb-6 w-3/6 mx-auto">
+        Welcome to the Gadget Heaven Dashboard! Manage your products, track orders, and customize your store effortlessly. Stay updated with the latest trends, analyze sales, and enhance your gadget shopping experience—all in one place
         </p>
         <div className="flex justify-center gap-6">
           <button
