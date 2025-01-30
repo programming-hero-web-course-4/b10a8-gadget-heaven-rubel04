@@ -3,35 +3,45 @@ import { getStoredProduct, removeProductToLS } from "../Utility/cart";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { BsSortNumericUpAlt } from "react-icons/bs";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
+import group from "../assets/Group.png";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [products, setProducts] = useState([]);
   const [carts, setCarts] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
+  const navigate = useNavigate();
   useEffect(() => {
     fetch("./products.json")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+
   useEffect(() => {
     const storedProduct = getStoredProduct();
     const storedProductStr = storedProduct.map((id) => id);
-    console.log(storedProductStr);
     const product = products.filter((product) =>
       storedProductStr.includes(product.product_id)
     );
     setCarts(product);
-    carts.map((c) => setTotalCost(totalCost + c.price));
+    const total = product.reduce((sum, cart) => sum + cart.price, 0);
+    console.log(total);
+    setTotalCost(total.toFixed(2));
   }, [products]);
+  console.log(totalCost);
+
   const handleSortProduct = () => {
     const sort = [...carts].sort((a, b) => b.price - a.price);
     setCarts(sort);
   };
+
   const handlePurchase = () => {
     removeProductToLS("");
-    const total = carts.map((c) => setTotalCost(totalCost - c.price));
+    document.getElementById("my_modal_5").showModal();
     setCarts([]);
-    toast.success("Payment succesfully", total);
+
+    // toast.success("Payment succesfully", total);
   };
   const handleDelete = (id) => {
     const product = carts.filter((cart) => cart.product_id !== id);
@@ -41,7 +51,37 @@ const Cart = () => {
   };
   return (
     <div className="bg-gray-100 pb-10">
+      <Helmet>
+        <title>Gadget Heaven | Cart</title>
+      </Helmet>
       <div className="w-7xl mx-auto">
+        <dialog
+          id="my_modal_5"
+          className="modal md:w-74 mx-auto modal-bottom sm:modal-middle"
+        >
+          <div className="modal-box">
+            <div className="flex justify-center">
+              <img src={group} alt="img" />
+            </div>
+            <h3 className="font-bold text-xl text-center py-2">
+              Payment Successfully
+            </h3>
+            <p className="text-center text-[#09080F99]">
+              Thanks for purchasing.
+            </p>
+            <p className="text-center text-[#09080F99]">Total: {totalCost}</p>
+            <div className="modal-action">
+              <form method="dialog" className="w-full">
+                <button
+                  onClick={() => navigate("/")}
+                  className="bg-[#11000011] py-1 font-medium cursor-pointer rounded-2xl w-full"
+                >
+                  Close
+                </button>
+              </form>
+            </div>
+          </div>
+        </dialog>
         <div className="flex justify-between items-center py-6">
           <h4 className="text-2xl font-medium">Cart</h4>
           <div className="flex gap-6">

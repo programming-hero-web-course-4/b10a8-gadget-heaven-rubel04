@@ -6,6 +6,7 @@ import {
 } from "../Utility/cart";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const Wishlist = () => {
   const [products, setProducts] = useState([]);
@@ -39,6 +40,9 @@ const Wishlist = () => {
   };
   return (
     <div className="bg-gray-100 pb-10">
+      <Helmet>
+        <title>Gadget Heaven | Wishlist</title>
+      </Helmet>
       <div className="w-7xl mx-auto">
         <h4 className="text-2xl font-medium py-6">Cart</h4>
         {carts.length !== 0 ? (

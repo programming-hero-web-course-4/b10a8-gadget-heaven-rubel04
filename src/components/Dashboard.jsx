@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Cart from "./Cart";
 import Wishlist from "./Wishlist";
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
   const [active, setActive] = useState(true);
@@ -13,6 +14,9 @@ const Dashboard = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Gadget Heaven | Dashboard</title>
+      </Helmet>
       <div className="bg-[#9538E2] text-white pt-4 pb-10">
         <h2 className="text-3xl font-bold text-center">Dashboard</h2>
         <p className="text-center mt-4 mb-6">

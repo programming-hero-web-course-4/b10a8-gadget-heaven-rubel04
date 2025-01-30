@@ -7,14 +7,6 @@ const getStoredProduct = () => {
   return [];
 };
 
-const addProductToLS = (productId) => {
-  const storedProduct = getStoredProduct();
-  if (!storedProduct.includes(productId)) {
-    storedProduct.push(productId);
-    const storedProductStr = JSON.stringify(storedProduct);
-    localStorage.setItem("cart-list", storedProductStr);
-  }
-};
 const getStoredWishList = () => {
   const storedProductStr = localStorage.getItem("wish-list");
   if (storedProductStr) {
@@ -22,6 +14,16 @@ const getStoredWishList = () => {
     return storedProduct;
   }
   return [];
+};
+
+
+const addProductToLS = (productId) => {
+  const storedProduct = getStoredProduct();
+  if (!storedProduct.includes(productId)) {
+    storedProduct.push(productId);
+    const storedProductStr = JSON.stringify(storedProduct);
+    localStorage.setItem("cart-list", storedProductStr);
+  }
 };
 
 const addWishListToLS = (productId) => {
