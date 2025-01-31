@@ -26,10 +26,8 @@ const Cart = () => {
     );
     setCarts(product);
     const total = product.reduce((sum, cart) => sum + cart.price, 0);
-    console.log(total);
-    setTotalCost(total.toFixed(2));
+    setTotalCost(parseFloat(total.toFixed(2)));
   }, [products]);
-  console.log(totalCost);
 
   const handleSortProduct = () => {
     const sort = [...carts].sort((a, b) => b.price - a.price);
@@ -45,8 +43,11 @@ const Cart = () => {
   };
   const handleDelete = (id) => {
     const product = carts.filter((cart) => cart.product_id !== id);
+    const deleteProduct = carts.find((cart) => cart.product_id === id);
     removeProductToLS(id);
     toast.success("Deleted succesfully to the Cart");
+    const updateCost = parseFloat(totalCost) - parseFloat(deleteProduct.price);
+    setTotalCost(updateCost);
     setCarts(product);
   };
   return (
