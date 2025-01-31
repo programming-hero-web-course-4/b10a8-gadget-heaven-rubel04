@@ -18,7 +18,7 @@
     "price": 149.99,
     "description": "Stylish and functional smartwatch tailored for fitness enthusiasts.",
     "specification": ["Step tracking", "Sleep analysis", "5-day battery life"],
-    "availability": true,
+    "availability": false,
     "rating": 4.5
   },
   {
@@ -51,7 +51,7 @@
     "price": 1799.99,
     "description": "Laptop designed for content creators with powerful GPU and display.",
     "specification": ["16-inch 4K display", "32GB RAM", "2TB SSD"],
-    "availability": true,
+    "availability": false,
     "rating": 4.9
   },
   {
@@ -88,7 +88,7 @@
     "price": 499.99,
     "description": "Affordable laptop designed for students with great performance.",
     "specification": ["15.6-inch display", "4GB RAM", "128GB SSD"],
-    "availability": true,
+    "availability": false,
     "rating": 4.2
   },
   {
@@ -110,7 +110,7 @@
     "price": 999.99,
     "description": "Slim and portable laptop optimized for productivity and performance.",
     "specification": ["8GB RAM", "512GB SSD", "Intel i5 processor"],
-    "availability": true,
+    "availability": false,
     "rating": 4.5
   }
 ]
